@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .warpper{
+            width: 960px;
+            height: 800px;
+            background-image: url(../hinh/Image20240225155402.png);
+            margin: 0 auto;
+            padding: 2%;
+            padding-top: 0;
+        }
+        .sub_warpper{
+            height: 100%;
+            width: 100%;
+            border: 5px solid cadetblue;
+        }
+        nav{
+            height: 6.88%;
+            width: 100%;
+            background-color: darkorchid;
+            display: flex;
+        }
+        .nav1{
+            height: 100%;
+            width: 50%;
+            text-transform: uppercase;
+        }
+        .nav1 ul{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .nav1 a{
+            text-decoration: none;
+        }
+        .nav2{
+            height: 100%;
+            width: 45%;
+            padding-right: 5%;
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            text-transform: uppercase;
+            color: red;
+        }
+        header{
+            height: 23.42%;
+            width: 100%;
+            background-image: url(../hinh/Image20240225155403.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .content{
+            height: 60%;
+            width: 100%;
+            border-top: 2px solid cadetblue;
+            border-bottom: 2px solid cadetblue;
+            display: flex;
+        }
+        .section{
+            height: 100%;
+            width: 70%;
+            background-color: aqua;
+        }
+        .section h2{
+            text-align: center;
+            color: red;
+        }
+        .section fieldset{
+            height: 71.93%;
+            width: 43.3%;
+            border-radius: 4%;
+            float: right;
+            margin-right: 3%;
+        }
+        .aside{
+            height: 98%;
+            width: 29%;
+            border: 5px solid gray;
+            text-align: center;
+            color: red;
+            text-shadow: 2px 2px 2px yellow;
+        }
+        .aside img{
+            width: 100%;
+        }
+        .aside img:hover{
+            transform: rotate(15deg);
+        }
+        .aside hr{
+            border-style: dotted;
+            color: black;
+        }
+        footer{
+            height: 9.4%;
+            padding-left: 2%;
+            padding-right: 2%;
+            background-color: burlywood;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="warpper">
+        <div class="sub_warpper">
+            <nav>
+                <div class="nav1">
+                    <ul>
+                        <li><a href="home.html">home</a></li>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">products</a></li>
+                        <li><a href="#">contact</a></li>
+                    </ul>
+                </div>
+                <div class="nav2">
+                    search:
+                    <input type="text" placeholder="Search here...">
+                    <input type="button" value="GO" style="background-color: blue;">
+                </div>
+            </nav>
+            <header></header>
+            <div class="content">
+                <div class="section">
+                    <h2>Introduction - Contact</h2>
+                    <fieldset>
+                        <legend>Infomation</legend>
+                        <form action="">
+                            <p>
+                                Name<br>
+                                <input type="text" required placeholder="Your Name" id="name"></p>
+                                <div id="error-message1" style="color: red; display: none;">Vui lòng nhập dữ liệu!</div>
+                            <p>
+                                Email<br>
+                                <input type="text" required placeholder="Your email" id="email"></p>
+                                <div id="error-message2" style="color: red; display: none;">Vui lòng nhập dữ liệu!</div>
+                            <p>
+                                Gender<br>
+                                <input type="radio" name="Gender" value="Male" checked>Male
+                                <input type="radio" name="Gender" value="Female">Female</p>
+                            <p style="display: flex; justify-content: space-around;">
+                                <input type="button" value="Submit" id="submit">
+                                <input type="button" value="Reset"></p>
+                        </form>
+                        <script>
+                            const name = document.querySelector('#name');
+                            const email = document.querySelector('#email');
+                            const submit = document.querySelector('#submit');
+                            const errorMessage1 = document.querySelector('#error-message1');
+                            const errorMessage2 = document.querySelector('#error-message2');
+    
+                            submit.addEventListener('click', function() {
+                            if (!name.value) {
+                                errorMessage1.style.display = 'block';
+                            }else errorMessage1.style.display = 'none';
+                            if (!email.value) {
+                                errorMessage2.style.display = 'block';
+                            }else errorMessage2.style.display = 'none';
+                            });
+                        </script>
+                    </fieldset>
+                    <p style="padding-left: 20px; font-size: 18px;">Flowering plants are plants which produce flowers as their reproductive structures. 
+                        They come in a great variety of shapes and sizes and include grasses, sedges, rushes, 
+                        many trees, as well as familiar plants like daffodils and daisies. Flowers often, 
+                        though not always, have brightly coloured petals. The flowers conceal inside them the 
+                        female ovules which will be fertilised by pollen grains. The pollen grains are the 
+                        male parts of the flower. Fertilised ovules develop into the seeds from which new 
+                        plants will grow. The fact that the ovules are protected inside flowers has contributed 
+                        greatly to the success of flowering plants.</p>
+                </div>
+                <div class="aside">
+                    flower
+                    <hr>
+                    <img src="../hinh/Image20240225155350.jpg" alt="Lỗi hình ảnh">
+                    Flower Conference
+                    <hr>
+                    <img src="../hinh/Image20240225155405.jpg" alt="Lỗi hình ảnh">
+                    Flower Pot
+                    <hr>
+                    <img src="../hinh/Image20240225155408.jpg" alt="Lỗi hình ảnh">
+                </div>
+            </div>
+            <footer>
+                <p>22664411 - Bùi Quang Minh</p>
+                <p>DHKTPM18B - Công nghệ thông tin</p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
